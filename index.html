@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samyog Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, #5177d1, #1e293b);
+      color: #f1f5f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+     display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #1e293b;
+  width: 100%;
+    }
+
+    nav .left {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ceecf9;
+    }
+
+    nav ul {
+     display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #38bdf8;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 90%;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 6px solid #aec8d2;
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(56, 189, 248, 0.6);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #38bdf8;
+      display: inline-block;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills li {
+      background: #1e293b;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .skills li:hover {
+      background: #334155;
+    }
+
+    .contact p {
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+      margin-top: 60px;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-image img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="left">SAMYOG'S PORTFOLIO</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="section hero reveal">
+    <div class="hero-text">
+      <h1>Hello, I'm Samyog</h1>
+      <p>A passionate web developer with a focus on creating clean and user-friendly experiences. I enjoy turning complex problems into simple, beautiful designs.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+    <div class="hero-image">
+      <img src="wpp.jpg" alt="Samyog Photo">
+    </div>
+  </section>
+
+  <section id="about" class="section about reveal">
+    <h2 class="section-title">About Me</h2>
+    <p>I'm Samyog Pangeni from Syangja, Nepal. I have a background in Information and Communication Technology in Education and I love building digital tools that make life easier. I'm currently enhancing my skills and contributing to IT education through internships and real-world projects. I believe in learning by doing and continuously push myself to grow as a developer and as a person.</p>
+  </section>
+
+  <section id="skills" class="section skills reveal">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+      <li> Computer Skills</li>
+  
+      <li>Communication</li>
+      <li>Problem Solving</li>
+      <li>Time Management</li>
+      <li>Teamwork</li>
+      <li>Critical Thinking</li>
+    </ul>
+    <a href="Resume.pdf" class="btn" download>Download CV</a>
+  </section>
+
+  <section id="contact" class="section contact reveal">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:samyogpangeni4@gmail.com">samyogpangeni4@gmail.com</a></p>
+    <p>Location: Waling, Syangja, Nepal</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Samyog Pangeni. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animation effect
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
